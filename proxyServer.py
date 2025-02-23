@@ -59,8 +59,9 @@ while True:
             except Exception as e:
                 print("Illegal request", e)
         else:
-            tcpCliSock.send(b"HTTP/1.0 404 Not Found\r\n")
-            tcpCliSock.send(b"Content-Type:text/html\r\n\r\n")
+            tcpCliSock.send("HTTP/1.0 404 sendErrorErrorError\r\n")
+            tcpCliSock.send("Content-Type:text/html\r\n")
+            tcpCliSock.send("\r\n")
 
     tcpCliSock.close()
 tcpSerSock.close()
